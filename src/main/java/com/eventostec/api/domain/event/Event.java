@@ -20,19 +20,22 @@ public class Event {
     private String description;
     private String imgUrl;
     private Boolean remote;
+    private String eventUrl;
     private Date date;
 
     public Event() {
     }
 
-    public Event(UUID id, String title, String description, String imgUrl, Boolean remote, Date date) {
+    public Event(UUID id, String title, String description, String eventUrl, String imgUrl, Boolean remote, Date date) {
         this.id = id;
         this.title = title;
+        this.eventUrl = eventUrl;
         this.description = description;
         this.imgUrl = imgUrl;
         this.remote = remote;
         this.date = date;
     }
+
 
     public UUID getId() {
         return id;
@@ -56,6 +59,14 @@ public class Event {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getEventUrl() {
+        return eventUrl;
+    }
+
+    public void setEventUrl(String eventUrl) {
+        this.eventUrl = eventUrl;
     }
 
     public String getImgUrl() {
